@@ -1,0 +1,42 @@
+{"level":"info","message":"Configuração do Redis: redis://default:91238983Jonadab@painel.whatlead.com.br:6379","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:15:40"}
+{"level":"info","message":"🔗 Conectado ao Redis com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:15:40"}
+{"level":"info","message":"✅ Cliente Redis está pronto para uso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:15:40"}
+{"level":"info","message":"Redis conectado com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:15:40"}
+{"level":"info","message":"🤖 Servidor iniciado na porta 7000 🌐","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:15:40"}
+{"level":"info","message":"✅ Usuário registrado com sucesso: jonadab.leite@gmail.com","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:23:50"}
+{"level":"info","message":"🔐 Usuário logado: jonadab.leite@gmail.com","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:25:05"}
+{"clientVersion":"6.3.1","code":"P2003","level":"error","message":"❌ Erro ao criar bot: \nInvalid `prisma.bot.create()` invocation in\n/home/jonadab/Documentos/crypto-bot-saas-api/src/controllers/bot.controller.ts:38:34\n\n  35   return res.status(401).json({ message: 'Usuário não autenticado' });\n  36 }\n  37 \n→ 38 const bot = await prisma.bot.create(\nForeign key constraint violated: `Bot_strategyId_fkey (index)`","meta":{"field_name":"Bot_strategyId_fkey (index)","modelName":"Bot"},"name":"PrismaClientKnownRequestError","service":"crypto-bot-saas-api","stack":"PrismaClientKnownRequestError: \nInvalid `prisma.bot.create()` invocation in\n/home/jonadab/Documentos/crypto-bot-saas-api/src/controllers/bot.controller.ts:38:34\n\n  35   return res.status(401).json({ message: 'Usuário não autenticado' });\n  36 }\n  37 \n→ 38 const bot = await prisma.bot.create(\nForeign key constraint violated: `Bot_strategyId_fkey (index)`\n    at Bn.handleRequestError (/home/jonadab/Documentos/crypto-bot-saas-api/node_modules/@prisma/client/runtime/library.js:121:7362)\n    at Bn.handleAndLogRequestError (/home/jonadab/Documentos/crypto-bot-saas-api/node_modules/@prisma/client/runtime/library.js:121:6686)\n    at Bn.request (/home/jonadab/Documentos/crypto-bot-saas-api/node_modules/@prisma/client/runtime/library.js:121:6393)\n    at l (/home/jonadab/Documentos/crypto-bot-saas-api/node_modules/@prisma/client/runtime/library.js:130:9645)","timestamp":"15/02/2025 04:29:31"}
+{"level":"info","message":"Configuração do Redis: redis://default:91238983Jonadab@painel.whatlead.com.br:6379","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:03"}
+{"level":"info","message":"🔗 Conectado ao Redis com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:03"}
+{"level":"info","message":"✅ Cliente Redis está pronto para uso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:03"}
+{"level":"info","message":"Redis conectado com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:03"}
+{"level":"info","message":"🤖 Servidor iniciado na porta 7000 🌐","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:03"}
+{"level":"info","message":"Configuração do Redis: redis://default:91238983Jonadab@painel.whatlead.com.br:6379","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:16"}
+{"level":"info","message":"🔗 Conectado ao Redis com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:17"}
+{"level":"info","message":"✅ Cliente Redis está pronto para uso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:17"}
+{"level":"info","message":"Redis conectado com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:17"}
+{"level":"info","message":"🤖 Servidor iniciado na porta 7000 🌐","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:17"}
+{"level":"info","message":"Configuração do Redis: redis://default:91238983Jonadab@painel.whatlead.com.br:6379","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:26"}
+{"level":"info","message":"🔗 Conectado ao Redis com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:27"}
+{"level":"info","message":"✅ Cliente Redis está pronto para uso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:27"}
+{"level":"info","message":"Redis conectado com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:27"}
+{"level":"info","message":"🤖 Servidor iniciado na porta 7000 🌐","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:27"}
+{"level":"info","message":"Configuração do Redis: redis://default:91238983Jonadab@painel.whatlead.com.br:6379","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:41"}
+{"level":"info","message":"🔗 Conectado ao Redis com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:41"}
+{"level":"info","message":"✅ Cliente Redis está pronto para uso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:41"}
+{"level":"info","message":"Redis conectado com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:41"}
+{"level":"info","message":"🤖 Servidor iniciado na porta 7000 🌐","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:32:41"}
+{"level":"info","message":"Configuração do Redis: redis://default:91238983Jonadab@painel.whatlead.com.br:6379","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:33:06"}
+{"level":"info","message":"🔗 Conectado ao Redis com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:33:07"}
+{"level":"info","message":"✅ Cliente Redis está pronto para uso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:33:07"}
+{"level":"info","message":"Redis conectado com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:33:07"}
+{"level":"info","message":"🤖 Servidor iniciado na porta 7000 🌐","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:33:07"}
+{"level":"info","message":"Conexão com o Redis fechada","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:34:30"}
+{"level":"info","message":"Configuração do Redis: redis://default:91238983Jonadab@painel.whatlead.com.br:6379","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:34:44"}
+{"level":"info","message":"🔗 Conectado ao Redis com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:34:45"}
+{"level":"info","message":"✅ Cliente Redis está pronto para uso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:34:45"}
+{"level":"info","message":"Redis conectado com sucesso","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:34:45"}
+{"level":"info","message":"🤖 Servidor iniciado na porta 7000 🌐","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:34:45"}
+{"level":"info","message":"✅ Bot criado: Meu Primeiro Bot","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:35:55"}
+{"level":"error","message":"❌ Erro ao iniciar bot: 🔐 Chaves da API Binance não configuradas","service":"crypto-bot-saas-api","stack":"Error: 🔐 Chaves da API Binance não configuradas\n    at getBinanceCredentials (/home/jonadab/Documentos/crypto-bot-saas-api/src/controllers/bot.controller.ts:23:11)\n    at /home/jonadab/Documentos/crypto-bot-saas-api/src/controllers/bot.controller.ts:142:35\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/jonadab/Documentos/crypto-bot-saas-api/src/controllers/bot.controller.ts:6:58)","timestamp":"15/02/2025 04:38:45"}
+{"level":"info","message":"Conexão com o Redis fechada","service":"crypto-bot-saas-api","timestamp":"15/02/2025 04:42:11"}

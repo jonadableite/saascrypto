@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  password     String
+  apiKey       String?
+  apiSecret    String?
+  riskSettings Json?     // Store risk management settings
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  bots         Bot[]
+  trades       Trade[]
+  backtests    Backtest[]
+}
+
+model Bot {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  active      Boolean  @default(false)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  strategy    Strategy @relation(fields: [strategyId], references: [id])
+  strategyId  String
+  trades      Trade[]
+  config      Json     // Store bot-specific configuration
+  riskConfig  Json?    // Store risk management settings
+  signals     TradingSignal[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Strategy {
+  id           String   @id @default(uuid())
+  name         String
+  description  String?
+  type         String   // e.g., "SMC", "TREND_FOLLOWING", "MEAN_REVERSION"
+  config       Json     // Store strategy parameters
+  indicators   Json[]   // Store technical indicators configuration
+  entryRules   Json[]   // Store entry conditions
+  exitRules    Json[]   // Store exit conditions
+  riskRules    Json[]   // Store risk management rules
+  performance  Json?    // Store strategy performance metrics
+  bots         Bot[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Trade {
+  id            String   @id @default(uuid())
+  pair          String
+  type          String   // "BUY" or "SELL"
+  amount        Float
+  price         Float
+  status        String   // "OPEN", "CLOSED", "CANCELLED"
+  profitLoss    Float?
+  entryReason   Json?    // Store entry signal details
+  exitReason    Json?    // Store exit signal details
+  indicators    Json?    // Store indicator values at entry
+  riskMetrics   Json?    // Store risk metrics for the trade
+  botId         String
+  userId        String
+  bot           Bot      @relation(fields: [botId], references: [id])
+  user          User     @relation(fields: [userId], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Backtest {
+  id            String   @id @default(uuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  strategyId    String
+  startDate     DateTime
+  endDate       DateTime
+  pair          String
+  timeframe     String
+  results       Json     // Store backtest results
+  performance   Json     // Store performance metrics
+  createdAt     DateTime @default(now())
+}
+
+model MarketData {
+  id         String   @id @default(uuid())
+  pair       String
+  timeframe  String
+  timestamp  DateTime
+  open       Float
+  high       Float
+  low        Float
+  close      Float
+  volume     Float
+  indicators Json?    // Store calculated indicator values
+  patterns   Json?    // Store detected patterns
+  createdAt  DateTime @default(now())
+
+  @@unique([pair, timeframe, timestamp])
+}
+
+model TradingSignal {
+  id        String   @id @default(uuid())
+  botId     String
+  symbol    String
+  type      String   // "BUY" ou "SELL"
+  price     Float
+  createdAt DateTime @default(now())
+  bot       Bot      @relation(fields: [botId], references: [id])
+}
