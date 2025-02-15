@@ -37,7 +37,7 @@ Para começar com o CryptoBot, siga estas etapas simples:
 Clone o repositório e instale as dependências:
 
 ```sh
-git clone https://github.com/seu-usuario/cryptobot.git
+git clone https://github.com/jonadableite/saascrypto.git
 cd cryptobot
 npm install
 ```
