@@ -3,6 +3,7 @@
 CryptoBot é uma plataforma SaaS de ponta para trading automatizado de criptomoedas, oferecendo estratégias avançadas de IA e análise em tempo real para maximizar seus lucros no mercado volátil de criptomoedas.
 
 📋 Índice
+###
 Recursos
 Tecnologias
 Começando
