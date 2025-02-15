@@ -30,6 +30,12 @@ interface Bot {
   active: boolean;
 }
 
-export type BotConfig = SmaCrossoverConfig | SmaRsiConfig;
+export interface BotConfig {
+  symbol: string;
+  interval: string;
+  longPeriod: number;
+  shortPeriod: number;
+  strategyId?: string;
+}
 
 export type BotConfigJson = Prisma.JsonObject & BotConfig;

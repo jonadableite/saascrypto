@@ -139,18 +139,10 @@ export const startBot = async (req: Request, res: Response) => {
       return res.status(404).json({ message: '👁‍🗨 Bot não encontrado' });
     }
 
-    const { apiKey, apiSecret } = getBinanceCredentials();
-
-    const botService = new BotService(apiKey, apiSecret);
+    const botService = new BotService();
     await botService.startBot(id);
     res.status(200).json({ message: '🟢 Bot iniciado com sucesso' });
   } catch (error) {
-    if (
-      error instanceof Error &&
-      error.message === 'Chaves da API Binance não configuradas'
-    ) {
-      return res.status(503).json({ message: error.message });
-    }
     handleApiError(res, error, 'Erro ao iniciar bot');
   }
 };

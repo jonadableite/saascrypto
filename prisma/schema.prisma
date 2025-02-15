@@ -109,8 +109,10 @@ model TradingSignal {
   id        String   @id @default(uuid())
   botId     String
   symbol    String
-  type      String   // "BUY" ou "SELL"
+  type      String // "BUY" ou "SELL"
   price     Float
+  reason    String?
   createdAt DateTime @default(now())
   bot       Bot      @relation(fields: [botId], references: [id])
 }
+

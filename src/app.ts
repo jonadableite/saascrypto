@@ -8,6 +8,7 @@ import { logger } from './config/logger';
 import redisClient from './config/redis';
 import authRoutes from './routes/auth.routes';
 import botRoutes from './routes/bot.routes';
+import strategyRoutes from './routes/strategy.routes';
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use(limiter);
 
 app.use('/api/auth', authRoutes);
 app.use('/api/bots', botRoutes);
+app.use('/api/strategies', strategyRoutes);
 
 const PORT = process.env.PORT || 7000;
 
